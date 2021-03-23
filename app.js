@@ -8,6 +8,8 @@ const connect = require('./dataBase/connect');
 
 const todoApi = require('./routes/todoApi');
 const userApi = require('./routes/userApi');
+const mailApi = require('./routes/mailApi');
+
 // Create express App
 const app = express();
 const port = 3000;
@@ -25,6 +27,7 @@ app.get('/', async(req,res) => {
 //////////*******todoApi */
 app.use('/todo', todoApi);
 app.use('/user', userApi);
+app.use('/mail', mailApi);
 
 
 // End route section
